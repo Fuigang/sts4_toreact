@@ -2,7 +2,7 @@ package com.kedu.study.dto;
 
 public class AuthDTO {
 	private String id;
-	private String pw;
+	private String password;
 	
 	
 	
@@ -16,10 +16,10 @@ public class AuthDTO {
 	}
 	
 	
-	public AuthDTO(String id, String pw) {
+	public AuthDTO(String id, String password) {
 		super();
 		this.id = id;
-		this.pw = pw;
+		this.password = password;
 	}
 	public String getId() {
 		return id;
@@ -27,11 +27,11 @@ public class AuthDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPw() {
-		return pw;
+	public String getPassword() {
+		return password;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	

@@ -30,8 +30,9 @@ public class AuthController {
 		return ResponseEntity.ok().build();
 	}
 	
-	@PostMapping("/check")
+	@PostMapping("/login")
 	public ResponseEntity<Boolean> idCheck(@RequestBody AuthDTO dto){
+		System.out.println("전달된 데이터 : " + dto.getId());
 		boolean isExist = authService.Idcheck(dto);
 		return new ResponseEntity<>(isExist, HttpStatus.OK);
 		
