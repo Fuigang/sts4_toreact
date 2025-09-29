@@ -23,6 +23,7 @@ public class AuthDAO {
 	public int IsUserExist(AuthDTO dto) {
 		
 		return mybatis.selectOne("Auth.IsUserExist",dto);
+		
 	}
 	
 }

@@ -3,10 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Auth">
-	<select id="IsUserExist" parameterType="com.kedu.study.dto.AuthDTO">
-		SELECT COUNT(*) from auth where id = #{id} and pw = #{pw}
+	<select id="IsUserExist" parameterType="com.kedu.study.dto.AuthDTO" resultType="int">
+		SELECT COUNT(*) from auth where id = #{id} and pw = #{password}
 	</select>
 	<insert id="insert">
-		insert into auth values(#{id}, #{pw})
+		insert into auth values(#{id}, #{password})
 	</insert>
 </mapper>
