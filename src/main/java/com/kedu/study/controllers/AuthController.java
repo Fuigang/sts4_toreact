@@ -24,8 +24,9 @@ public class AuthController {
 	
 	
 	
-	@PostMapping //C [create]
+	@PostMapping("/signup") //C [create]
 	public ResponseEntity<Void> insert(@RequestBody AuthDTO dto){
+		System.out.println("전달된 데이터 : " + dto.getId());
 		authService.insert(dto);
 		return ResponseEntity.ok().build();
 	}

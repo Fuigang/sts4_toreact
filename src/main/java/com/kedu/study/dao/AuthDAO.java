@@ -17,7 +17,7 @@ public class AuthDAO {
 	
 	
 	public int insert(AuthDTO dto) {
-		return mybatis.insert("Auto.insert");
+		return mybatis.insert("Auth.insert",dto);
 	}
 	
 	public int IsUserExist(AuthDTO dto) {
