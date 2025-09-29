@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Music">
+	<select id="selectAll" resultType="com.kedu.study.dto.MusicDTO">
+		select * from music
+	</select>
+	<select id="searchByTitle" resultType="com.kedu.study.dto.MusicDTO">
+		select * from music where title like '%' || #{title} || '%'
+	</select>
+	
+	<insert id="insert">
+		insert into music values(music_seq.nextval, #{title}, #{singer})
+	</insert>
+	<delete id="delete">
+		delete music where id = #{id}
+	</delete>
+	<update id="update">
+		update  music set title = #{title}, singer = #{singer} where id = #{id}
+	</update>
+	
+</mapper>
